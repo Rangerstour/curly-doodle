@@ -31,13 +31,6 @@ const values = [
   },
 ];
 
-const team = [
-  { name: 'Alex Rivera', role: 'Founder & CEO', image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200' },
-  { name: 'Sarah Chen', role: 'Head of Engineering', image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=200' },
-  { name: 'Marcus Johnson', role: 'Product Manager', image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=200' },
-  { name: 'Emily Park', role: 'Customer Success', image: 'https://images.pexels.com/photos/1181695/pexels-photo-1181695.jpeg?auto=compress&cs=tinysrgb&w=200' },
-];
-
 export default function About() {
   return (
     <div className="min-h-screen pt-24 pb-16 bg-gray-50 dark:bg-gray-950">
@@ -133,34 +126,6 @@ export default function About() {
                 </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{value.title}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{value.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Team */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">Our Team</h2>
-            <p className="text-gray-600 dark:text-gray-400">The people behind the products</p>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, i) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-gray-200 dark:border-gray-800"
-                />
-                <h3 className="font-semibold text-gray-900 dark:text-white">{member.name}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-500">{member.role}</p>
               </motion.div>
             ))}
           </div>
