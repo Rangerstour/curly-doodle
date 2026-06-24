@@ -9,7 +9,7 @@ import {
   SlidersHorizontal, Grid3X3, LayoutList, ChevronDown, X, Heart, Search
 } from 'lucide-react';
 
-const categories = ['All', 'USB Cables', 'HDMI Cables', 'Charging Adapters', 'Power Cables', 'Audio Cables', 'Network Cables'];
+const categories = ['All', '3-in-1 Charging Stations', 'GaN Fast Chargers', 'Magnetic Wireless Chargers', 'USB-C Charging Hubs', 'Travel Charging Kits', 'MagSafe Accessories'];
 
 const sortOptions: { label: string; value: SortOption }[] = [
   { label: 'Price: Low to High', value: 'price-asc' },

@@ -12,26 +12,26 @@ const testimonials = [
   {
     name: 'Michael Chen',
     role: 'IT Professional',
-    content: 'The USB-C cables from Strong Multicables are exceptional. Fast charging and data transfer speeds are top-notch. I have replaced all my cables with theirs.',
+    content: 'The 3-in-1 charging station from Strong Multicables is exceptional. I can charge my iPhone, Apple Watch, and AirPods all at once. Perfect for my desk.',
     rating: 5,
   },
   {
     name: 'Sarah Johnson',
     role: 'Content Creator',
-    content: 'The HDMI 2.1 cable is a game-changer for my 8K setup. Crystal clear video with zero latency. Best cable I have ever purchased.',
+    content: 'The GaN charger is a game-changer. So compact yet powerful enough to charge my MacBook Pro and phone simultaneously. Best charger I have ever purchased.',
     rating: 5,
   },
   {
     name: 'David Park',
     role: 'Software Engineer',
-    content: 'I love the GaN charger. So compact yet powerful enough to charge my MacBook Pro and phone simultaneously. Build quality is premium.',
+    content: 'I love the USB-C hub. 8 ports in one compact device. Expands my MacBook perfectly for all my peripherals. Build quality is premium.',
     rating: 5,
   },
   {
     name: 'Emily Rodriguez',
-    role: 'Home Theater Enthusiast',
-    content: 'The fiber optic cable was exactly what I needed for my home theater setup. Perfect signal quality and easy to install.',
-    rating: 4,
+    role: 'Frequent Traveler',
+    content: 'The travel charging kit was exactly what I needed for my trips. All international plugs and a GaN charger in one pouch. Perfect.',
+    rating: 5,
   },
 ];
 
@@ -113,13 +113,13 @@ export default function Home() {
                 <span className="text-sm font-medium text-blue-300">Premium Quality Cables & Accessories</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Power Your Digital Life with{' '}
+                Power Your Devices with{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-300">
-                  Premium Cables
+                  Premium Charging
                 </span>
               </h1>
               <p className="text-lg text-gray-300 mb-8 max-w-xl">
-                Discover the difference quality makes. From ultra-fast USB-C to 8K HDMI cables, our products are engineered for professionals who demand the best.
+                Discover the difference quality makes. From GaN fast chargers to 3-in-1 charging stations, our products are engineered for professionals who demand the best.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -179,12 +179,12 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {[
-              { name: 'USB Cables', icon: Cable, image: 'https://images.pexels.com/photos/4218883/pexels-photo-4218883.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { name: 'HDMI Cables', icon: Cable, image: 'https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { name: 'Charging', icon: Battery, image: 'https://images.pexels.com/photos/4467735/pexels-photo-4467735.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { name: 'Power', icon: Zap, image: 'https://images.pexels.com/photos/2399840/pexels-photo-2399840.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { name: 'Audio', icon: Cable, image: 'https://images.pexels.com/photos/3525738/pexels-photo-3525738.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { name: 'Network', icon: Wifi, image: 'https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { name: '3-in-1 Stations', icon: Battery, image: 'https://images.pexels.com/photos/4041178/pexels-photo-4041178.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { name: 'GaN Chargers', icon: Zap, image: 'https://images.pexels.com/photos/4202315/pexels-photo-4202315.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { name: 'Magnetic Chargers', icon: Battery, image: 'https://images.pexels.com/photos/4218883/pexels-photo-4218883.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { name: 'USB-C Hubs', icon: Cable, image: 'https://images.pexels.com/photos/4792728/pexels-photo-4792728.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { name: 'Travel Kits', icon: Cable, image: 'https://images.pexels.com/photos/4041178/pexels-photo-4041178.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { name: 'MagSafe Accessories', icon: Cable, image: 'https://images.pexels.com/photos/4202315/pexels-photo-4202315.jpeg?auto=compress&cs=tinysrgb&w=400' },
             ].map((cat, i) => (
               <motion.div
                 key={cat.name}
@@ -194,7 +194,7 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <Link
-                  to={`/shop?category=${encodeURIComponent(cat.name === 'Charging' ? 'Charging Adapters' : cat.name === 'Network' ? 'Network Cables' : cat.name === 'Power' ? 'Power Cables' : cat.name === 'Audio' ? 'Audio Cables' : cat.name)}`}
+                  to={`/shop?category=${encodeURIComponent(cat.name === '3-in-1 Stations' ? '3-in-1 Charging Stations' : cat.name === 'GaN Chargers' ? 'GaN Fast Chargers' : cat.name === 'Magnetic Chargers' ? 'Magnetic Wireless Chargers' : cat.name === 'USB-C Hubs' ? 'USB-C Charging Hubs' : cat.name === 'Travel Kits' ? 'Travel Charging Kits' : cat.name === 'MagSafe Accessories' ? 'MagSafe Accessories' : cat.name)}`}
                   className="group block relative overflow-hidden rounded-2xl aspect-square"
                 >
                   <img src={cat.image} alt={cat.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
